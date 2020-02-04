@@ -64,7 +64,7 @@ def sendImage(s):
         #print(datetime.datetime.now() ,'start send image ')
         _base64 =base64.b64encode(s)
         #print(str(_base64)[2:-1])
-        url = f'https://malammastpenfacerecognitionazure.azurewebsites.net/api/v1/FaceRecognition/identify'
+        url = f'https://.....FaceRecognition/identify'
         data =    {
                             'image' : str(_base64)[2:-1],
                             'imageType' : 'base64',
@@ -79,7 +79,7 @@ def sendImage(s):
                 if len(data['model']) > 0:
                     if len(data['model'][0]['candidates']) > 0:
                         #print(data['model'][0]['candidates'][0]['personId'])
-                        url = f'https://malammastpenrealtimeapi20190626012828.azurewebsites.net/api/v1/EmployeeEntry/Entry'
+                        url = f'https://..../Entry'
                         data =    {
                                 'EquipmentId' : 1,
                                 'EmployeeFacePrintID' : data['model'][0]['candidates'][0]['personId']
